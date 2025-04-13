@@ -1,0 +1,20 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.log
+*.sqlite3
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Environment variables
+.env
+
+# System Files 
+.DS_Store
+Thumbs.db
