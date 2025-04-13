@@ -6,7 +6,7 @@ Este projeto foi desenvolvido por alunos da **Universidade São Judas Tadeu (USJ
 
 | Nome | RA |
 |------|----|
-| Felipe Pinheiro Jofre | 824117237 |
+| Felipe Pinheiro Jofre | 824117137 |
 | Gustavo Lopes Silva | 82327145 |
 | Leonardo Henrique da Silva | 824214989 |
 | Marco Antonio Tavares Escudeiro | 824147959 |
