@@ -1,0 +1,88 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #cbddff;
+  }
+  
+  .profile-card {
+    background-color: white;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .profile-photo-input {
+    margin-top: 10px;
+  }
+  
+  .profile-info {
+    margin-top: 20px;
+  }
+  
+  .profile-item {
+    margin-bottom: 15px;
+  }
+  
+  .profile-item label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .profile-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .profile-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .profile-edit-button,
+  .profile-save-button,
+  .profile-logout-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .profile-edit-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .profile-save-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .profile-logout-button {
+    background-color: #f44336;
+    color: white;
+  }
+  
