@@ -1,17 +1,10 @@
 .header {
-  width: 100%;
   background-color: #ffffff;
-  padding: 20px 40px;
+  padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-}
-
-.illustration img {
-  height: 50px;
-  border-radius: 8px;
 }
 
 nav ul {
@@ -20,6 +13,19 @@ nav ul {
   gap: 16px;
   margin: 0;
   padding: 0;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+}
+
+div.illustration-logo {
+  display: flex;
+  justify-content: left;
+  width: 50%;
 }
 
 .nav-btn {
@@ -38,10 +44,7 @@ nav ul {
   transform: scale(1.05);
 }
 
-.logo-img {
-  height: 20px;    
-  width: 10px;
+div.illustration-logo img {
+  width: 50%;
+  height: auto;
 }
-
-
-

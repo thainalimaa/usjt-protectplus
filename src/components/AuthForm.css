@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 1rem;
-  background-color: #f3f4f6;
+  background-color: #8bbcec;
 }
 
 .auth-box {

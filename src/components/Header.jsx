@@ -5,7 +5,7 @@ import logo from '../assets/logo.png';
 function Header() {
   return (
     <header className="header">
-      <div className="illustration">
+      <div className="illustration-logo">
         <img src={logo} alt="Logo" className="logo-img" />
       </div>
       <nav>

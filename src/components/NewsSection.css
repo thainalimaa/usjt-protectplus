@@ -1,10 +1,15 @@
 .news-section {
   margin-top: 40px;
+  width: 100%;
+  background-color: #1e68bd;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 .news-section h2 {
   font-size: 24px;
-  color: #000;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
@@ -12,7 +17,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 
@@ -22,14 +27,14 @@
   border-radius: 10px;
   padding: 15px;
   width: 250px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
 .news-card:hover {
   transform: scale(1.03);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
 }
 
 .news-card img {

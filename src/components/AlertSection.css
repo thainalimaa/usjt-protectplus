@@ -1,14 +1,43 @@
 .alert-section {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  padding: 40px;
+  padding: 80px;
   border-radius: 12px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  gap: 40px;
+  margin-bottom: 80px;
+  box-shadow: 0 4px 0px rgba(0, 0, 0, 0.05);
+  gap: 20px;
   flex-wrap: wrap;
+  width: 100%;
+}
+
+.alert-message {
+  max-width: 500px;
+  color: #000;
+}
+
+.alert-message h2 {
+  font-size: 26px;
+  margin: 10px 0;
+}
+
+.verify-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.verify-button:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 .illustration {

@@ -1,59 +1,104 @@
-.footer {
-  background-color: #f1f1f1;
-  padding: 30px 40px;
-  text-align: center;
-  margin-top: 40px;
-  border-top: 1px solid #ccc;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.footer hr {
-  border: none;
-  border-top: 1px solid #ccc;
-  margin-bottom: 20px;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.footer p {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.footer ul {
-  list-style: none;
+body {
+  margin: 0;
   padding: 0;
-  margin: 10px 0 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #000000;
+  line-height: 1.6;
+}
+
+.footer {
+  background-color: #000000;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  border-top: 1px solid #333;
+  color: #ffffff;
+}
+
+.footer-container {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.footer ul li {
-  color: #333;
-  font-weight: 500;
-  cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
+.footer-left {
+  flex: 1;
 }
 
-.footer ul li:hover {
-  color: #007bff;
-  transform: scale(1.05);
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.footer-menus {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 0.5px solid #444;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .footer-links a {
-  margin: 0 10px;
   text-decoration: none;
-  color: #666;
   font-size: 14px;
+  color: #cccccc;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #000;
+  color: #ffffff;
+}
+
+.footer-separator {
+  color: #999;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #aaaaaa;
+}
+
+@media (max-width: 768px) {
+  .footer-container,
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-right,
+  .footer-left {
+    width: 100%;
+    text-align: center;
+  }
 }
