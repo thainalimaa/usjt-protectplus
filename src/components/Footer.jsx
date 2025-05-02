@@ -7,12 +7,6 @@ function Footer() {
         <div className="footer-left">
           <h2 className="footer-logo">PROTECT+</h2>
         </div>
-
-        <div className="footer-right">
-          <p className="footer-menus">
-            Sobre | Notícias | Verifique agora | Login ou Cadastro
-          </p>
-        </div>
       </div>
 
       <hr className="footer-divider" />

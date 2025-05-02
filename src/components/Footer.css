@@ -1,11 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  color: #000000;
-  line-height: 1.6;
-}
 
 .footer {
   background-color: #000000;
@@ -31,16 +23,6 @@ body {
 .footer-logo {
   font-size: 24px;
   font-weight: bold;
-  color: #ffffff;
-}
-
-.footer-right {
-  flex: 1;
-  text-align: right;
-}
-
-.footer-menus {
-  font-size: 14px;
   color: #ffffff;
 }
 
@@ -96,7 +78,6 @@ body {
     gap: 10px;
   }
 
-  .footer-right,
   .footer-left {
     width: 100%;
     text-align: center;
