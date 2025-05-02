@@ -21,11 +21,6 @@ const newsItems = [
     title: "Empresas lançam relógio inteligente para saúde mental...",
     category: "VESTÍVEIS",
     image: "/path/to/wearable-image.jpg"
-  },
-  {
-    title: "Empresas lançam relógio inteligente para saúde mental...",
-    category: "VESTÍVEIS",
-    image: "/path/to/wearable-image.jpg"
   }
 ];
 

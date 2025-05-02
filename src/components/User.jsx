@@ -1,31 +1,45 @@
 import React, { useState } from "react";
-import "./Profile.css";
+import "./User.css";
+import defaultProfileImage from '../assets/login.png';
 
 const Profile = () => {
   const [isEditing, setIsEditing] = useState(false);
-  const [name, setName] = useState("João Silva");
-  const [email, setEmail] = useState("joao@example.com");
-  const [birthDate, setBirthDate] = useState("1990-04-15");
+  const [name, setName] = useState("Thaina Lima Matos");
+  const [email, setEmail] = useState("thaina2570@gmail.com");
+  const [birthDate, setBirthDate] = useState("2003-05-04");
+  const [profileImage, setProfileImage] = useState(defaultProfileImage);
 
   const handleEdit = () => setIsEditing(true);
   const handleSave = () => setIsEditing(false);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setProfileImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   return (
     <div className="profile-container">
       <div className="profile-card">
         <div className="profile-header">
           <img
-            src="https://via.placeholder.com/150"
+            src={profileImage}
             alt="Profile"
             className="profile-image"
           />
-          {isEditing ? (
+          {isEditing && (
             <input
               type="file"
-              id="profile-photo"
+              accept="image/*"
+              onChange={handleImageChange}
               className="profile-photo-input"
             />
-          ) : null}
+          )}
         </div>
 
         <div className="profile-info">
