@@ -8,7 +8,7 @@ import './Home.css';
 function Home() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <main className="main-content">
         <AlertSection />
         <NewsSection />

@@ -1,4 +1,4 @@
-.main-content {
+.quiz {
     background-color: #4474bd;
     padding: 40px 0;
     display: flex;
@@ -7,10 +7,10 @@
   
   .quiz-container {
     max-width: 600px;
-    height: 300px;
+    height: 330px;
     margin: 40px auto;
     padding: 10px 20px;
-    background-color: #8da7ee;
+    background-color: #c0d0fb;
     border-radius: 8px;
     border: 3px solid #ffffff;
   }

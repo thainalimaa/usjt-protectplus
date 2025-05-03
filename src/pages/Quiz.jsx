@@ -1,18 +1,18 @@
-import AuthForm from "../components/AuthForm";
-// import Header from '../components/Header';
-import Footer from '../components/Footer';
-
 import React from 'react';
+// import Header from '../components/Header';
+import AnalyseQuiz from '../components/AnalyseQuiz';
+import Footer from '../components/Footer';
+import './Quiz.css';
 
 
-function Login() {
+function Quiz() {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
       {/* <Header /> */}
-      <AuthForm />
+      <AnalyseQuiz />
       <Footer />
     </div>
   );
 }
 
-export default Login;
+export default Quiz;

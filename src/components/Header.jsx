@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import logo from '../assets/logo.png';
 
-function Header() {
+function Header({ setCurrentPage }) {
   return (
     <header className="header">
       <div className="illustration-logo">
@@ -10,9 +10,21 @@ function Header() {
       </div>
       <nav>
         <ul>
-          <li><button className="nav-btn">HOME</button></li>
-          <li><button className="nav-btn">LOGIN</button></li>
-          <li><button className="nav-btn">ANALISE SUA MENSAGEM</button></li>
+          <li>
+            <button className="nav-btn" onClick={() => setCurrentPage("home")}>
+              HOME
+            </button>
+          </li>
+          <li>
+            <button className="nav-btn" onClick={() => setCurrentPage("login")}>
+              LOGIN
+            </button>
+          </li>
+          <li>
+            <button className="nav-btn" onClick={() => setCurrentPage("analyze")}>
+              ANALISE SUA MENSAGEM
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
