@@ -4,13 +4,14 @@
   background-color: #1e68bd;
   padding-top: 20px;
   padding-bottom: 50px;
+  border-radius: 10px;
   margin-bottom: 80px;
 }
 
 .news-section h2 {
   font-size: 24px;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .news-cards {

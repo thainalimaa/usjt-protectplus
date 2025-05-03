@@ -1,15 +1,22 @@
 .alert-section {
+  background-color: #8bbcec;
+  padding: 60px 20px;
   display: flex;
+  justify-content: center;
+}
+
+.alert-content {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 70px 30px;
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-  padding: 80px;
-  border-radius: 12px;
-  margin-bottom: 80px;
-  box-shadow: 0 4px 0px rgba(0, 0, 0, 0.05);
-  gap: 20px;
-  flex-wrap: wrap;
-  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 30px;
 }
 
 .alert-message {
@@ -22,6 +29,10 @@
   margin: 10px 0;
 }
 
+p.alert-message-text {
+  padding: 0 10px;
+}
+
 .verify-button {
   background-color: #007bff;
   color: #fff;
@@ -31,8 +42,10 @@
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 50px;
+  margin-left: 120px;
   transition: all 0.3s ease;
+  width: 250px;
 }
 
 .verify-button:hover {
@@ -41,14 +54,13 @@
 }
 
 .illustration {
+  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex: 1;
 }
 
 .illustration img {
-  max-width: 500px;
+  max-width: 400px;
   width: 100%;
   height: auto;
   border-radius: 16px;

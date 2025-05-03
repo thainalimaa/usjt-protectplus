@@ -3,8 +3,9 @@
   align-items: center;
   justify-content: center;
   min-height: 80vh;
-  padding: 1rem;
+  padding: 50px;
   background-color: #8bbcec;
+
 }
 
 .auth-box {
@@ -29,6 +30,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
+  color: #ffffff;
 }
 
 .auth-form {
@@ -42,6 +44,16 @@
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
+  width: 100%;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  align-items: flex-start;
 }
 
 .auth-button {
@@ -65,7 +77,7 @@
 }
 
 .forgot-link {
-  color: #6b7280;
+  color: #ffffff;
   text-decoration: none;
   border: none;
   background: none;
@@ -74,7 +86,7 @@
 }
 
 .forgot-link:hover {
-  color: #2563eb;
+  color: #8ebdf4;
 }
 
 .forgot-form {
@@ -118,4 +130,75 @@
   font-size: 0.875rem;
 }
 
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 24px 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 9999;
+  max-width: 90%;
+  width: 400px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #333;
+  animation: fadeInScale 0.3s ease-out;
+}
 
+.success-message button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: #0c024e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.success-message button:hover {
+  background-color: #444;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.error-balloon {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  font-weight: bold;
+  opacity: 0;
+  animation: showError 3s forwards;
+}
+
+@keyframes showError {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}

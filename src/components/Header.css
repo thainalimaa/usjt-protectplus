@@ -40,11 +40,12 @@ div.illustration-logo {
 }
 
 .nav-btn:hover {
-  background-color: #333;
+  background-color: #8bbcec;
+  color: #000000;
   transform: scale(1.05);
 }
 
 div.illustration-logo img {
-  width: 50%;
+  width: 40%;
   height: auto;
 }

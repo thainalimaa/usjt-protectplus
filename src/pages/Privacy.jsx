@@ -1,14 +1,13 @@
-import AuthForm from "../components/AuthForm";
-
+import PrivacyPolicy from "../components/PrivacyPolicy";
 import React from 'react';
 
 
-function Login() {
+function Privacy() {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <AuthForm />
+      <PrivacyPolicy />
     </div>
   );
 }
 
-export default Login;
+export default Privacy;

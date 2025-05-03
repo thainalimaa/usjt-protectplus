@@ -1,13 +1,10 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import './TermsConditions.css';
+import './TermsAndPolicy.css';
 
 function PrivacyPolicy() {
   return (
-    <>
-      <Header />
-      <main className="PrivacyPolicy-container">
+    <div className='PrivacyPolicy-all'>
+      <div className="PrivacyPolicy-container">
         <h1>Política de Privacidade</h1>
 
         <h2>Coleta de Dados</h2>
@@ -33,9 +30,8 @@ function PrivacyPolicy() {
 
         <h2>Contato</h2>
         <p>Em caso de dúvidas sobre esta política, entre em contato através dos canais oficiais disponibilizados no site.</p>
-      </main>
-      <Footer />
-    </>
+      </div>
+    </div>
   );
 }
 

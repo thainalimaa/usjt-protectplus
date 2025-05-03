@@ -38,3 +38,15 @@
 .read-the-docs {
   color: #888;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #8bbcec;
+}
