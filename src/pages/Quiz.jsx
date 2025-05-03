@@ -1,7 +1,7 @@
 import React from 'react';
 import AnalyseQuiz from '../components/AnalyseQuiz';
 import Footer from '../components/Footer';
-import './Quiz.css';
+
 
 
 function Quiz() {
