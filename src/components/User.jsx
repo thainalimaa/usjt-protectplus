@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./User.css";
 import defaultProfileImage from '../assets/login.png';
 
-const Profile = () => {
+const Profile = ({ setCurrentPage }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [name, setName] = useState("Thaina Lima Matos");
   const [email, setEmail] = useState("thaina2570@gmail.com");
@@ -95,7 +95,12 @@ const Profile = () => {
                 Editar Perfil
               </button>
             )}
-            <button className="profile-logout-button">Sair</button>
+            <button
+              className="profile-logout-button"
+              onClick={() => setCurrentPage("home")}
+            >
+              Sair
+            </button>
           </div>
         </div>
       </div>

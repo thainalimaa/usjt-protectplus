@@ -11,30 +11,31 @@ const AuthForm = ({ setCurrentPage }) => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    setSuccessMessage("Cadastro realizado com sucesso!");
+    setSuccessMessage("Cadastro realizado com sucesso! ");
   };
 
   const handleForgotPassword = () => {
     if (resetEmail.trim()) {
-      setSuccessMessage("Um e-mail foi enviado com instruções para redefinir sua senha.");
+      setSuccessMessage("Um e-mail foi enviado com instruções para redefinir sua senha. ");
       setResetEmail("");
       setShowForgotPassword(false);
     }
   };
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const handleLogin = (email, password) => {
+    console.log("Login tentado com:", email, password); // <- Adicione isso
 
-    if (email === "admin@admin.com" && password === "admin") {
-      setCurrentPage("home");
+    if (email === "admin@admin.com" && password === "thaina123") {
+      console.log("Login correto, indo para profile"); // <- E isso
+      setCurrentPage("profile");
     } else {
       setLoginErrorMessage("E-mail ou senha incorretos");
-      
       setTimeout(() => {
         setLoginErrorMessage("");
       }, 4000);
     }
   };
+
 
   return (
     <div className="auth-container">
@@ -51,7 +52,13 @@ const AuthForm = ({ setCurrentPage }) => {
         {/* Login */}
         <div className="auth-section">
           <h2 className="auth-title">Login</h2>
-          <form className="auth-form" onSubmit={handleLogin}>
+          <form
+            className="auth-form"
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleLogin(email, password);
+            }}
+          >
             <input
               type="email"
               placeholder="Email"
@@ -70,6 +77,7 @@ const AuthForm = ({ setCurrentPage }) => {
             />
             <button className="auth-button" type="submit">Entrar</button>
           </form>
+
 
           {/* Exibir mensagem de erro se houver */}
           {loginErrorMessage && (
@@ -96,7 +104,16 @@ const AuthForm = ({ setCurrentPage }) => {
                 value={resetEmail}
                 onChange={(e) => setResetEmail(e.target.value)}
               />
-              <button className="reset-button" onClick={handleForgotPassword}>Enviar</button>
+              <button
+                className="reset-button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleForgotPassword();
+                }}
+              >
+                Enviar
+              </button>
+
             </div>
           )}
         </div>

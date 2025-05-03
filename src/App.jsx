@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Profile from "./pages/Profile"; 
+import Profile from "./pages/Profile";
 import Quiz from "./pages/Quiz";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -23,9 +23,9 @@ function App() {
           </>
         );
       case "login":
-        return <Login/>;
+        return <Login setCurrentPage={setCurrentPage} />;
       case "profile":
-        return <Profile />;
+        return <Profile setCurrentPage={setCurrentPage} />;
       case "analyze":
         return <Quiz />;
       case "terms":
