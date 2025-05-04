@@ -5,6 +5,7 @@
   min-height: 80vh;
   padding: 50px;
   background-color: #8bbcec;
+  
 
 }
 
@@ -24,6 +25,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 .auth-title {
@@ -31,6 +33,10 @@
   font-weight: bold;
   margin-bottom: 1.5rem;
   color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .auth-form {
@@ -54,6 +60,10 @@
   font-weight: 500;
   color: #ffffff;
   align-items: flex-start;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .auth-button {
@@ -64,10 +74,15 @@
   border-radius: 6px;
   cursor: pointer;
   transition: opacity 0.2s ease;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .auth-button:hover {
   opacity: 0.9;
+
 }
 
 .auth-forgot {
@@ -83,10 +98,18 @@
   background: none;
   cursor: pointer;
   transition: color 0.2s ease;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .forgot-link:hover {
   color: #8ebdf4;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .forgot-form {
@@ -106,6 +129,10 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .reset-button:hover {
@@ -128,6 +155,10 @@
   padding: 0 0.5rem;
   color: #ffffff;
   font-size: 0.875rem;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .success-message {
@@ -147,6 +178,10 @@
   font-size: 18px;
   color: #333;
   animation: fadeInScale 0.3s ease-out;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .success-message button {
@@ -159,6 +194,10 @@
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .success-message button:hover {

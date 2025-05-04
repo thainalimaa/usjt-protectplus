@@ -16,12 +16,17 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .footer-links {
   display: flex;
   gap: 1rem;
   align-items: center;
+  
 }
 
 .footer-link {
@@ -34,10 +39,18 @@
   padding: 0;
   white-space: nowrap;
   outline: none;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .footer-link:hover {
   color: #000; /* Cor do texto quando passar o mouse */
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .footer-link:focus {
@@ -58,4 +71,8 @@
   text-align: center;
   font-size: 0.9rem;
   color: #fff5f5;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }

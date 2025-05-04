@@ -6,12 +6,17 @@
   padding-bottom: 50px;
   border-radius: 10px;
   margin-bottom: 80px;
+  
 }
 
 .news-section h2 {
   font-size: 24px;
   color: #ffffff;
   margin-bottom: 40px;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 650;
+  font-style: normal;
 }
 
 .news-cards {
