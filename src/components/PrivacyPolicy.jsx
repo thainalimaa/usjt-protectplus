@@ -8,22 +8,23 @@ function PrivacyPolicy() {
         <h1>Política de Privacidade</h1>
 
         <h2>Coleta de Dados</h2>
-        <p>Este site não coleta informações pessoais identificáveis dos usuários. As mensagens submetidas para análise são processadas apenas para fornecer o resultado, sem armazenamento ou associação a dados pessoais.</p>
+        <p>Para utilizar a plataforma, o usuário precisa realizar um cadastro. Durante esse processo, coletamos apenas as informações estritamente necessárias para identificar a conta e viabilizar o funcionamento do serviço.</p>
 
         <h2>Uso das Informações</h2>
-        <p>As informações analisadas são utilizadas exclusivamente para identificar possíveis padrões de golpe e fornecer uma resposta imediata ao usuário. Nenhum dado é mantido após o término da análise.</p>
+        <p>Os dados coletados são utilizados exclusivamente para fins de autenticação, personalização do serviço e apoio à segurança digital do usuário. Nenhuma informação é usada para fins comerciais, publicitários ou repassada a terceiros sem consentimento explícito.</p>
 
         <h2>Compartilhamento de Dados</h2>
-        <p>Não compartilhamos mensagens ou dados fornecidos pelos usuários com terceiros. As exceções incluem exigências legais por parte de autoridades competentes.</p>
+        <p>Não compartilhamos dados pessoais ou interações dos usuários com terceiros, exceto quando houver exigência legal ou solicitação formal por parte de autoridades competentes.</p>
 
         <h2>Cookies e Tecnologias Semelhantes</h2>
-        <p>Este site não utiliza cookies para rastrear comportamento dos usuários. Apenas cookies essenciais podem ser utilizados para garantir o funcionamento adequado da plataforma.</p>
+        <p>Utilizamos cookies estritamente necessários para o funcionamento técnico da plataforma, como autenticação e manutenção da sessão do usuário. Não utilizamos cookies para fins de rastreamento comportamental ou publicidade.</p>
 
         <h2>Segurança da Informação</h2>
-        <p>Adotamos práticas de segurança para proteger as informações processadas. No entanto, nenhuma transmissão de dados pela internet é 100% segura, e não podemos garantir segurança absoluta.</p>
+        <p>Adotamos medidas técnicas e organizacionais para proteger os dados armazenados, incluindo criptografia, controle de acesso e monitoramento contínuo.</p>
 
         <h2>Direitos do Usuário</h2>
-        <p>Como não coletamos dados pessoais, não armazenamos informações que possam ser solicitadas, corrigidas ou removidas. O uso da plataforma é totalmente anônimo.</p>
+        <p>O usuário tem o direito de manter controle sobre os dados fornecidos no momento do cadastro. É possível atualizar informações de perfil, modificar preferências de uso e ajustar configurações da conta diretamente na plataforma.
+        Nos comprometemos a garantir clareza e facilidade no acesso a essas opções, assegurando que o uso dos dados ocorra de forma transparente, segura e conforme a legislação vigente.</p>
 
         <h2>Alterações nesta Política</h2>
         <p>Podemos atualizar esta Política de Privacidade periodicamente. As alterações entram em vigor imediatamente após sua publicação no site.</p>

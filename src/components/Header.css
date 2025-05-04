@@ -37,12 +37,20 @@ div.illustration-logo {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .nav-btn:hover {
   background-color: #8bbcec;
   color: #000000;
   transform: scale(1.05);
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 div.illustration-logo img {

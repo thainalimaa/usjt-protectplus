@@ -22,7 +22,7 @@ function Header({ setCurrentPage }) {
           </li>
           <li>
             <button className="nav-btn" onClick={() => setCurrentPage("analyze")}>
-              ANALISE SUA MENSAGEM
+              QUIZ DE ANÁLISE
             </button>
           </li>
         </ul>
