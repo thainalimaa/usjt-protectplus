@@ -42,8 +42,6 @@ p.alert-message-text {
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
-  margin-top: 50px;
-  margin-left: 120px;
   transition: all 0.3s ease;
   width: 250px;
 }

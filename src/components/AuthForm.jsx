@@ -23,10 +23,10 @@ const AuthForm = ({ setCurrentPage }) => {
   };
 
   const handleLogin = (email, password) => {
-    console.log("Login tentado com:", email, password); // <- Adicione isso
+    console.log("Login tentado com:", email, password);
 
-    if (email === "admin@admin.com" && password === "thaina123") {
-      console.log("Login correto, indo para profile"); // <- E isso
+    if (email === "admin@admin.com" && password === "admin") {
+      console.log("Login correto, indo para profile");
       setCurrentPage("profile");
     } else {
       setLoginErrorMessage("E-mail ou senha incorretos");
