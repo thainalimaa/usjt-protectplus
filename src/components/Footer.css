@@ -1,59 +1,78 @@
 .footer {
-  background-color: #f1f1f1;
-  padding: 30px 40px;
-  text-align: center;
-  margin-top: 40px;
-  border-top: 1px solid #ccc;
-  width: 100%;
-  box-sizing: border-box;
+  background-color: #2d2d2df1;
+  padding: 1rem 2rem;
+  font-family: sans-serif;
+  border-top: 1px solid #ddd;
 }
 
-.footer hr {
-  border: none;
-  border-top: 1px solid #ccc;
-  margin-bottom: 20px;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.footer p {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 20px;
+.footer-top {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
 }
 
-.footer ul li {
-  color: #333;
-  font-weight: 500;
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  
+}
+
+.footer-link {
+  background: none;
+  border: none;
+  color: #ffffff;
+  text-decoration: underline;
   cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
+  padding: 0;
+  white-space: nowrap;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
-.footer ul li:hover {
-  color: #007bff;
-  transform: scale(1.05);
+.footer-link:hover {
+  color: #000; /* Cor do texto quando passar o mouse */
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
-.footer-links a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #666;
-  font-size: 14px;
-  transition: color 0.3s ease;
+.footer-link:focus {
+  outline: none; /* Removendo o contorno azul no foco */
 }
 
-.footer-links a:hover {
-  color: #000;
+.footer-separator {
+  color: #ffffff;
+}
+
+.footer-divider {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff5f5;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
