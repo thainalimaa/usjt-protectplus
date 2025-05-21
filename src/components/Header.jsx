@@ -25,6 +25,11 @@ function Header({ setCurrentPage }) {
               QUIZ DE ANÁLISE
             </button>
           </li>
+          <li>
+            <button className="nav-btn" onClick={() => setCurrentPage("Chat")}>
+              CHAT DE ANÁLISE
+            </button>
+          </li>
         </ul>
       </nav>
     </header>

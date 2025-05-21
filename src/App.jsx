@@ -3,10 +3,12 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Quiz from "./pages/Quiz";
+import Chat from "./pages/Chat";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Terms from "./pages/Terms";
 import AlertSection from "./components/AlertSection";
+import ChatAnalyse from "./components/ChatAnalyse";
 import Privacy from "./pages/Privacy";
 import './App.css';
 
@@ -30,6 +32,8 @@ function App() {
         return <Quiz />;
       case "terms":
         return <Terms />;
+      case "Chat":
+        return <Chat setCurrentPage={setCurrentPage} />;
       case "privacy":
         return <Privacy />;
       default:
