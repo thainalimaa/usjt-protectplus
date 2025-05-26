@@ -1,0 +1,29 @@
+const API_KEY = process.env.REACT_APP_GEMINI_API_KEY;
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
+
+export async function analisarMensagem(mensagem) {
+  const prompt = `Recebi essa mensagem do meu banco. É golpe? Preciso que a resposta seja curta, objetiva e clara. Segue a mensagem:\n\n${mensagem}`;
+
+  const body = {
+    contents: [
+      {
+        parts: [{ text: prompt }]
+      }
+    ]
+  };
+
+  try {
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+
+    const data = await response.json();
+    const resposta = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    return resposta || '❌ Sem resposta útil.';
+  } catch (err) {
+    console.error('❌ Erro ao consultar o Gemini:', err);
+    return '❌ Erro ao consultar o Gemini.';
+  }
+}
