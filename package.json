@@ -11,7 +11,12 @@
     "start:server": "node src/server/index.js"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.5.3"
@@ -26,5 +31,10 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
     "vite": "^6.3.1"
-  }
+  },
+  "description": "Este projeto foi desenvolvido por alunos da **Universidade São Judas Tadeu (USJT)** durante as Unidades Curriculares de **Sistemas Distribuídos e Mobile** e **Usabilidade, Desenvolvimento Web, Mobile e Jogos**, no **1º semestre de 2025**.",
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
