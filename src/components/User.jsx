@@ -1,24 +1,72 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./User.css";
 import defaultProfileImage from '../assets/login.png';
 
 const Profile = ({ setCurrentPage }) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [name, setName] = useState("Thaina Lima Matos");
-  const [email, setEmail] = useState("thaina2570@gmail.com");
-  const [birthDate, setBirthDate] = useState("2003-05-04");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [birthDate, setBirthDate] = useState("");
   const [profileImage, setProfileImage] = useState(defaultProfileImage);
 
+  useEffect(() => {
+    const fetchUserData = async () => {
+      const savedEmail = localStorage.getItem("userEmail");
+      console.log(savedEmail)
+      if (!savedEmail) return;
+
+      try {
+        const response = await fetch(`http://localhost:8086/api/auth/user/${savedEmail}`);
+        const data = await response.json();
+        console.log("📦 Dados recebidos do backend:", data);
+        setName(data.nome_completo);
+        setEmail(data.email);
+        setBirthDate(data.data_nascimento);
+      } catch (error) {
+        console.error("Erro ao buscar dados do usuário:", error);
+      }
+    };
+
+    fetchUserData();
+  }, []);
+
   const handleEdit = () => setIsEditing(true);
-  const handleSave = () => setIsEditing(false);
+  const handleSave = async () => {
+    try {
+      const savedEmail = localStorage.getItem("userEmail");
+
+      const response = await fetch(`http://localhost:8086/api/auth/user/${savedEmail}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nome_completo: name,
+          data_nascimento: birthDate,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Erro ao atualizar dados.");
+      }
+
+      const updatedData = await response.json();
+      setName(updatedData.nome_completo);
+      setBirthDate(updatedData.data_nascimento);
+      console.log("Perfil atualizado com sucesso!");
+    } catch (error) {
+      console.error("Erro ao salvar alterações:", error);
+    }
+
+    setIsEditing(false);
+  };
+
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
-      reader.onloadend = () => {
-        setProfileImage(reader.result);
-      };
+      reader.onloadend = () => setProfileImage(reader.result);
       reader.readAsDataURL(file);
     }
   };
@@ -27,11 +75,7 @@ const Profile = ({ setCurrentPage }) => {
     <div className="profile-container">
       <div className="profile-card">
         <div className="profile-header">
-          <img
-            src={profileImage}
-            alt="Profile"
-            className="profile-image"
-          />
+          <img src={profileImage} alt="Profile" className="profile-image" />
           {isEditing && (
             <input
               type="file"
@@ -87,18 +131,11 @@ const Profile = ({ setCurrentPage }) => {
 
           <div className="profile-buttons">
             {isEditing ? (
-              <button onClick={handleSave} className="profile-save-button">
-                Salvar
-              </button>
+              <button onClick={handleSave} className="profile-save-button">Salvar</button>
             ) : (
-              <button onClick={handleEdit} className="profile-edit-button">
-                Editar Perfil
-              </button>
+              <button onClick={handleEdit} className="profile-edit-button">Editar Perfil</button>
             )}
-            <button
-              className="profile-logout-button"
-              onClick={() => setCurrentPage("home")}
-            >
+            <button onClick={() => setCurrentPage("home")} className="profile-logout-button">
               Sair
             </button>
           </div>
