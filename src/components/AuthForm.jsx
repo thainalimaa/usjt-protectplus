@@ -6,13 +6,53 @@ const AuthForm = ({ setCurrentPage }) => {
   const [resetEmail, setResetEmail] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [loginErrorMessage, setLoginErrorMessage] = useState("");
+  const [registerErrorMessage, setRegisterErrorMessage] = useState(""); // NOVO estado para erro registro
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleRegister = (e) => {
-    e.preventDefault();
-    setSuccessMessage("Cadastro realizado com sucesso! ");
-  };
+const handleRegister = async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+  const email = form[0].value;
+  const nome_completo = form[1].value;
+  const senha = form[2].value;
+  const cpf = form[3].value;
+  const data_nascimento = form[4].value;
+
+  try {
+    const res = await fetch("http://localhost:8086/api/auth/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, nome_completo, senha, cpf, data_nascimento }),
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      setSuccessMessage(data.message);
+      setRegisterErrorMessage("");
+      form.reset();
+    } else {
+      if (
+        data.message &&
+        typeof data.message === "string" &&
+        data.message.toLowerCase().includes("duplicate")
+      ) {
+        setRegisterErrorMessage("E-mail já cadastrado.");
+      } else {
+        const data = await res.json();
+        console.log("📬 Conteúdo da resposta:", data);
+
+        setRegisterErrorMessage("Erro no cadastro.");
+      }
+      setSuccessMessage("");
+    }
+  } catch (err) {
+    setRegisterErrorMessage("Erro ao se conectar ao servidor.");
+    setSuccessMessage("");
+  }
+};
 
   const handleForgotPassword = () => {
     if (resetEmail.trim()) {
@@ -22,20 +62,32 @@ const AuthForm = ({ setCurrentPage }) => {
     }
   };
 
-  const handleLogin = (email, password) => {
-    console.log("Login tentado com:", email, password);
+  const handleLogin = async (email, password) => {
+    try {
+      const response = await fetch("http://localhost:8086/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, senha: password }),
+      });
 
-    if (email === "admin@admin.com" && password === "admin") {
-      console.log("Login correto, indo para profile");
-      setCurrentPage("profile");
-    } else {
-      setLoginErrorMessage("E-mail ou senha incorretos");
-      setTimeout(() => {
-        setLoginErrorMessage("");
-      }, 4000);
+      const data = await response.json();
+
+      if (response.ok) {
+        console.log("Login bem-sucedido!");
+        localStorage.setItem("userEmail", email);
+        setCurrentPage("profile");
+      } else {
+        setLoginErrorMessage(data.message || "Erro ao fazer login");
+        setTimeout(() => setLoginErrorMessage(""), 4000);
+      }
+    } catch (error) {
+      console.error("Erro ao conectar com o servidor:", error);
+      setLoginErrorMessage("Erro ao conectar com o servidor");
+      setTimeout(() => setLoginErrorMessage(""), 4000);
     }
   };
-
 
   return (
     <div className="auth-container">
@@ -78,7 +130,6 @@ const AuthForm = ({ setCurrentPage }) => {
             <button className="auth-button" type="submit">Entrar</button>
           </form>
 
-
           {/* Exibir mensagem de erro se houver */}
           {loginErrorMessage && (
             <div className="error-balloon">
@@ -113,7 +164,6 @@ const AuthForm = ({ setCurrentPage }) => {
               >
                 Enviar
               </button>
-
             </div>
           )}
         </div>
@@ -154,6 +204,13 @@ const AuthForm = ({ setCurrentPage }) => {
 
             <button className="auth-button" type="submit">Cadastrar</button>
           </form>
+
+          {/* Mensagem de erro de registro */}
+          {registerErrorMessage && (
+            <div className="error-balloon">
+              <span>{registerErrorMessage}</span>
+            </div>
+          )}
         </div>
 
       </div>

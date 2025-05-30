@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const API_KEY = "";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
@@ -13,17 +15,14 @@ export async function analisarMensagem(mensagem) {
   };
 
   try {
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
+    const response = await axios.post(API_URL, body, {
+      headers: { 'Content-Type': 'application/json' }
     });
 
-    const data = await response.json();
-    const resposta = data.candidates?.[0]?.content?.parts?.[0]?.text;
-    return resposta || '❌ Sem resposta útil.';
+    const resposta = response.data?.candidates?.[0]?.content?.parts?.[0]?.text;
+    return resposta || 'Sem resposta útil.';
   } catch (err) {
-    console.error('❌ Erro ao consultar o Gemini:', err);
-    return '❌ Erro ao consultar o Gemini.';
+    console.error('Erro ao consultar o Gemini:', err);
+    return 'Erro ao consultar o Gemini.';
   }
 }
